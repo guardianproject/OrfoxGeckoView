@@ -188,6 +188,8 @@ public class MainActivity extends Activity {
         	PrefsHelper.setPref("security.checkloaduri",true);
         	
         	PrefsHelper.setPref("security.mixed_content.block_display_content", true);
+        	
+        	PrefsHelper.setPref("media.peerconnection.enabled",false); //webrtc disabled
         }
         
         private void setCipherSuites ()
