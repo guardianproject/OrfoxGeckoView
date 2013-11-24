@@ -1,6 +1,13 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
 
     <item
+   android:id="@+id/actionViewLayout"
+   android:showAsAction="ifRoom|collapseActionView"
+   android:title="Browse"
+   android:actionLayout="@layout/activity_actionview_edittext"
+/>
+    
+    <item
         android:id="@+id/action_exit"
         android:orderInCategory="100"
         android:showAsAction="never"

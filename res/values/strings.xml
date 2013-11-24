@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">GeckoBrowser</string>
+    <string name="app_name">Orweb4</string>
     <string name="action_exit">Exit</string>
     <string name="go_button_text">Go</string>
-    <string name="default_url">http://mozilla.com</string>
+    <string name="default_url">https://check.torproject.org</string>
     
 </resources>
