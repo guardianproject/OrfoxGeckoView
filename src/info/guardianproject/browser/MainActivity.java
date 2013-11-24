@@ -13,6 +13,7 @@ import android.content.ClipData.Item;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -20,6 +21,8 @@ import android.view.View.OnClickListener;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.TextView.OnEditorActionListener;
 import android.widget.Toast;
 
 public class MainActivity extends Activity {
@@ -33,12 +36,10 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_INDETERMINATE_PROGRESS);
 
-        
         setContentView(R.layout.activity_main);
 
         mGeckoView = (GeckoView) findViewById(R.id.gecko_view);
         
-                
         mGeckoView.setChromeDelegate(new MyGeckoViewChrome());
         mGeckoView.setContentDelegate(new MyGeckoViewContent());
 
@@ -56,9 +57,34 @@ public class MainActivity extends Activity {
         View view = item.getActionView();
         
         mUrlBar = (EditText) view.findViewById(R.id.url_bar);
+        mUrlBar.setImeActionLabel("Go", KeyEvent.KEYCODE_ENTER);
+        
+        mUrlBar.setOnEditorActionListener(new OnEditorActionListener(){
 
+			@Override
+			public boolean onEditorAction(TextView v, int actionId,
+					KeyEvent event) {
+				
+				
+				if (event != null && event.getKeyCode() == KeyEvent.KEYCODE_ENTER)
+				{
+					 GeckoView.Browser browser = mGeckoView.getCurrentBrowser();
+		                
+		                
+		                if (browser == null) {
+		                    browser = mGeckoView.addBrowser(mUrlBar.getText().toString());
+		                } else {
+		                    browser.loadUrl(mUrlBar.getText().toString());
+		                }
+				}
+				
+				return false;
+			}
+        	
+        	
+        });
         
-        
+        /*
         Button goButton = (Button) view.findViewById(R.id.go_button);
         goButton.setOnClickListener(new OnClickListener() {
             @Override
@@ -73,7 +99,7 @@ public class MainActivity extends Activity {
                     browser.loadUrl(mUrlBar.getText().toString());
                 }
             }
-        });
+        });*/
 
         
         return true;
@@ -86,6 +112,7 @@ public class MainActivity extends Activity {
             case R.id.action_exit:
                 finish();
                 return true;
+            	
             default:
                 return super.onOptionsItemSelected(item);
         }
@@ -243,6 +270,7 @@ public class MainActivity extends Activity {
             // Use the title returned from Gecko to update the UI
             // TODO: Only if the browser is the selected browser
             setTitle(title);
+            
         }
 
 		@Override
@@ -260,7 +288,9 @@ public class MainActivity extends Activity {
 			super.onPageStart(arg0, arg1, arg2);
 			
 			mUrlBar.setText(arg2);
-			
+
+        	mUrlBar.setSelection(0, arg2.length());
+        	
 			   setProgressBarIndeterminateVisibility(Boolean.TRUE); 
 
             
