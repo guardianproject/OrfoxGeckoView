@@ -7,5 +7,5 @@ projectdir=`dirname $f`
     echo "Updating ant setup in $projectdir:"
     android update lib-project -p $projectdir -t $target
 done
-android update project -p . --subprojects -t $target --name orwebng
+android update project -p . --subprojects -t $target --name orfox
 
