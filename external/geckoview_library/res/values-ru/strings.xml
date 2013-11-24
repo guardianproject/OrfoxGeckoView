@@ -1,0 +1,787 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+
+<!DOCTYPE resources [
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+
+<!ENTITY  brandShortName  "Nightly">
+<!ENTITY  brandFullName   "Mozilla Nightly">
+<!ENTITY  vendorShortName "Mozilla">
+<!ENTITY  logoTrademark   "">
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+
+<!ENTITY no_space_to_start_error "Недостаточно свободного места для запуска &brandShortName;.">
+<!ENTITY error_loading_file "При попытке загрузки файлов, требуемых для запуска &brandShortName;, произошла ошибка.">
+<!ENTITY bookmarks_title "Закладки">
+<!ENTITY history_title "История">
+<!ENTITY reading_list_title "Список для чтения">
+<!ENTITY switch_to_tab "Перейти на вкладку">
+<!ENTITY crash_reporter_title "Сообщение о падении &brandShortName;">
+<!ENTITY crash_message2 "&brandShortName; столкнулся с проблемой и упал. После перезапуска список ваших вкладок будет показан на начальной странице &brandShortName;.">
+<!ENTITY crash_send_report_message3 "Сообщить в &vendorShortName; об этом падении, чтобы они смогли это исправить">
+<!ENTITY crash_include_url2 "Включить адрес страницы на которой я был в это время">
+<!ENTITY crash_sorry "Приносим свои извинения">
+<!ENTITY crash_comment "Добавить комментарий (комментарии публично доступны)">
+<!ENTITY crash_allow_contact2 "Разрешить &vendorShortName; связаться со мной по поводу этого сообщения">
+<!ENTITY crash_email "Ваш адрес эл. почты">
+<!ENTITY crash_closing_alert "Выйти, не отправляя сообщение о падении?">
+<!ENTITY sending_crash_report "Отправка сообщения о падении\u2026">
+<!ENTITY crash_close_label "Закрыть">
+<!ENTITY crash_restart_label "Перезапустить &brandShortName;">
+<!ENTITY exit_label "Выход">
+<!ENTITY launcher_shortcuts_title "Веб-приложения &brandShortName;">
+<!ENTITY launcher_shortcuts_empty "Веб-приложения не найдены">
+<!ENTITY choose_file "Выбор файла">
+<!ENTITY url_bar_default_text "Введите поисковый запрос или адрес">
+<!ENTITY bookmark "Закладка">
+<!ENTITY bookmark_added "Закладка добавлена">
+<!ENTITY bookmark_removed "Закладка удалена">
+<!ENTITY bookmark_updated "Закладка обновлена">
+<!ENTITY bookmark_options "Настройки">
+<!ENTITY history_today_section "Сегодня">
+<!ENTITY history_yesterday_section "Вчера">
+<!ENTITY history_week_section "7 дней назад">
+<!ENTITY history_older_section "Более 7 дней назад">
+<!ENTITY go "Перейти">
+<!ENTITY search "Поиск">
+<!ENTITY reload "Обновить">
+<!ENTITY forward "Вперёд">
+<!ENTITY menu "Меню">
+<!ENTITY back "Назад">
+<!ENTITY stop "Стоп">
+<!ENTITY site_security "Защита сайта">
+<!ENTITY close_tab "Закрыть вкладку">
+<!ENTITY one_tab "1 вкладка">
+<!ENTITY num_tabs2 "&formatD; вкладок">
+<!ENTITY new_tab_opened "Открыта новая вкладка">
+<!ENTITY settings "Параметры">
+<!ENTITY settings_title "Параметры">
+<!ENTITY pref_category_advanced "Дополнительно">
+<!ENTITY pref_category_customize "Настройка">
+<!ENTITY pref_category_search2 "Параметры поиска">
+<!ENTITY pref_category_display "Отображение">
+<!ENTITY pref_category_privacy_short "Приватность">
+<!ENTITY pref_category_vendor "&vendorShortName;">
+<!ENTITY pref_category_datareporting "Выбор данных">
+<!ENTITY pref_category_installed_search_engines "Установленные поисковые системы">
+<!ENTITY pref_category_add_search_providers "Добавить других провайдеров поиска">
+<!ENTITY pref_search_tip "СОВЕТ: Добавляйте любой веб-сайт в список провайдеров поиска путем долгого нажатия на его поле поиска.">
+<!ENTITY pref_category_devtools "Инструменты разработки">
+<!ENTITY pref_developer_remotedebugging "Удалённый отладчик">
+<!ENTITY pref_developer_remotedebugging_docs "Подробнее">
+<!ENTITY pref_remember_signons "Запоминать пароли">
+<!ENTITY pref_header_customize "Настройка">
+<!ENTITY pref_header_display "Отображение">
+<!ENTITY pref_header_privacy_short "Приватность">
+<!ENTITY pref_header_help "Справка">
+<!ENTITY pref_header_vendor "&vendorShortName;">
+<!ENTITY pref_header_devtools "Инструменты разработки">
+<!ENTITY pref_cookies_menu "Куки">
+<!ENTITY pref_cookies_accept_all "Включены">
+<!ENTITY pref_cookies_not_accept_foreign "Включены, кроме сторонних сайтов">
+<!ENTITY pref_cookies_disabled "Отключены">
+<!ENTITY pref_donottrack_menu "Отслеживание">
+<!ENTITY pref_donottrack_disallow_tracking "Сообщать сайтам, что я не хочу, чтобы меня отслеживали">
+<!ENTITY pref_donottrack_allow_tracking "Сообщать сайтам, что я хочу, чтобы меня отслеживали">
+<!ENTITY pref_donottrack_no_pref "Не сообщать сайтам ничего о моих настройках отслеживания">
+<!ENTITY pref_char_encoding "Кодировка">
+<!ENTITY pref_char_encoding_on "Показывать меню">
+<!ENTITY pref_char_encoding_off "Скрывать меню">
+<!ENTITY pref_clear_private_data "Удалить мои данные">
+<!ENTITY pref_plugins "Плагины">
+<!ENTITY pref_plugins_enabled "Включены">
+<!ENTITY pref_plugins_tap_to_play "По нажатию">
+<!ENTITY pref_plugins_disabled "Отключены">
+<!ENTITY pref_text_size "Размер текста">
+<!ENTITY pref_reflow_on_zoom4 "Перерисовка текста">
+<!ENTITY pref_restore "Вкладки">
+<!ENTITY pref_restore_always "Всегда восстанавливать">
+<!ENTITY pref_restore_quit "Не восстанавливать после выхода из &brandShortName;">
+<!ENTITY pref_font_size_tiny "Мелкий">
+<!ENTITY pref_font_size_small "Маленький">
+<!ENTITY pref_font_size_medium "Средний">
+<!ENTITY pref_font_size_large "Большой">
+<!ENTITY pref_font_size_xlarge "Огромный">
+<!ENTITY pref_font_size_set "Установить">
+<!ENTITY pref_font_size_adjust_char "A">
+<!ENTITY pref_font_size_preview_text "Быстрый оранжевый лис перепрыгивает через ваши ожидания с высокой скоростью, большей гибкостью и повышенной безопасностью. Будучи некоммерческой организацией, мы свободны в своём развитии и нам не нужно идти на компромиссы. Мы улучшим для вас работу в Интернете и сделаем его будущее более светлым.">
+<!ENTITY pref_use_master_password "Задать мастер-пароль">
+<!ENTITY pref_show_product_announcements "Анонсы продукта">
+<!ENTITY pref_sync "Синхронизация">
+<!ENTITY pref_search_suggestions "Поисковые предложения">
+<!ENTITY pref_import_android "Импорт из Android">
+<!ENTITY pref_private_data_history "Журнал посещений и загрузок">
+<!ENTITY pref_private_data_formdata "Журнал форм и поиска">
+<!ENTITY pref_private_data_cookies2 "Куки и активные сеансы">
+<!ENTITY pref_private_data_passwords "Сохранённые пароли">
+<!ENTITY pref_private_data_cache "Кэш">
+<!ENTITY pref_private_data_offlineApps "Данные автономных веб-сайтов">
+<!ENTITY pref_private_data_siteSettings2 "Настройки сайтов">
+<!ENTITY pref_private_data_downloadFiles "Загруженные файлы">
+<!ENTITY pref_about_firefox "О &brandShortName;">
+<!ENTITY pref_vendor_faqs "FAQ">
+<!ENTITY pref_vendor_feedback "Отправить отзыв">
+<!ENTITY pref_search_set_default "Установить по умолчанию">
+<!ENTITY pref_search_default "По умолчанию">
+<!ENTITY pref_search_remove "Удалить">
+<!ENTITY pref_search_last_toast "Вы не можете удалить или отключить вашу последнюю поисковую систему.">
+<!ENTITY datareporting_notification_title "Статистика и данные &brandShortName;">
+<!ENTITY datareporting_notification_action_long "Выбрать, какой информацией поделиться">
+<!ENTITY datareporting_notification_action "Выбрать, чем поделиться">
+<!ENTITY datareporting_notification_summary "Чтобы улучшить вашу работу, &brandShortName; автоматически отправляет некоторые данные в &vendorShortName;.">
+<!ENTITY datareporting_notification_summary_short "Чтобы улучшить вашу работу, &brandShortName;…">
+<!ENTITY datareporting_notification_ticker_text "&datareporting_notification_title;: &datareporting_notification_action_long;">
+<!ENTITY datareporting_fhr_title "Отчёт о здоровье &brandShortName;">
+<!ENTITY datareporting_fhr_summary2 "Делится данными о здоровье вашего браузера с &vendorShortName; и помогает вам больше узнать о скорости его работы">
+<!ENTITY datareporting_abouthr_title "Посмотреть мой отчёт о здоровье">
+<!ENTITY datareporting_telemetry_title "Телеметрия">
+<!ENTITY datareporting_telemetry_summary "Делится сведениями о производительности, использовании, аппаратном обеспечении и настройках вашего браузера с &vendorShortName;, чтобы помочь нам сделать &brandShortName; ещё лучше">
+<!ENTITY datareporting_crashreporter_summary "&brandShortName; отправляет сообщения о падениях, чтобы помочь &vendorShortName; сделать ваш браузер более стабильным и безопасным">
+<!ENTITY datareporting_crashreporter_title_short "Сообщения о падениях">
+<!ENTITY datareporting_wifi_title "Службы местоположения &vendorShortName;">
+<!ENTITY datareporting_wifi_summary "Помогите улучшить службы определения местоположения для открытого Интернета, позволив &brandShortName; собирать и отправлять анонимные данные о базовых станциях сотовой сети">
+<!ENTITY pref_update_autodownload "Автообновление">
+<!ENTITY pref_update_autodownload_wifi "Только через Wi-Fi">
+<!ENTITY pref_update_autodownload_disabled "Отключено">
+<!ENTITY pref_update_autodownload_enabled "Включено">
+<!ENTITY quit "Выход">
+<!ENTITY addons "Дополнения">
+<!ENTITY downloads "Загрузки">
+<!ENTITY apps "Приложения">
+<!ENTITY char_encoding "Кодировка">
+<!ENTITY share "Поделиться">
+<!ENTITY share_title "Поделиться через">
+<!ENTITY share_image_failed "Не удалось поделиться этим изображением">
+<!ENTITY save_as_pdf "Сохранить как PDF">
+<!ENTITY find_in_page "Найти на странице">
+<!ENTITY desktop_mode "Полная версия сайта">
+<!ENTITY tools "Инструменты">
+<!ENTITY new_tab "Новая вкладка">
+<!ENTITY new_private_tab "Приватная вкладка">
+<!ENTITY close_all_tabs "Закрыть все вкладки">
+<!ENTITY tabs_normal "Вкладки">
+<!ENTITY tabs_private "Приватные">
+<!ENTITY tabs_synced "Синхронизированные">
+<!ENTITY set_image_fail "Не удалось установить изображение">
+<!ENTITY set_image_chooser_title "Установить изображение как">
+<!ENTITY find_text "Найти на странице">
+<!ENTITY find_prev "Назад">
+<!ENTITY find_next "Далее">
+<!ENTITY find_close "Закрыть">
+<!ENTITY contextmenu_open_new_tab "Открыть в новой вкладке">
+<!ENTITY contextmenu_open_private_tab "Открыть в приватной вкладке">
+<!ENTITY contextmenu_open_in_reader "Открыть для чтения">
+<!ENTITY contextmenu_remove "Удалить">
+<!ENTITY contextmenu_add_to_launcher "Добавить на домашний экран">
+<!ENTITY contextmenu_share "Поделиться">
+<!ENTITY contextmenu_pasteandgo "Вставить и перейти">
+<!ENTITY contextmenu_paste "Вставить">
+<!ENTITY contextmenu_copyurl "Копировать адрес">
+<!ENTITY contextmenu_edit_bookmark "Изменить">
+<!ENTITY contextmenu_subscribe "Подписаться на страницу">
+<!ENTITY contextmenu_site_settings "Изменить параметры сайта">
+<!ENTITY contextmenu_top_sites_edit "Изменить">
+<!ENTITY contextmenu_top_sites_pin "Закрепить сайт">
+<!ENTITY contextmenu_top_sites_unpin "Открепить сайт">
+<!ENTITY contextmenu_add_search_engine "Добавить поисковую систему">
+<!ENTITY pref_titlebar_mode "Панель заголовка">
+<!ENTITY pref_titlebar_mode_title "Отображать заголовок страницы">
+<!ENTITY pref_titlebar_mode_url "Отображать адрес страницы">
+<!ENTITY history_removed "Страница удалена">
+<!ENTITY bookmark_edit_title "Изменение закладки">
+<!ENTITY bookmark_edit_name "Имя">
+<!ENTITY bookmark_edit_location "Расположение">
+<!ENTITY bookmark_edit_keyword "Краткое имя">
+<!ENTITY site_settings_title3 "Параметры сайта">
+<!ENTITY site_settings_cancel "Отмена">
+<!ENTITY site_settings_clear "Очистить">
+<!ENTITY site_settings_no_settings "Нет настроек для очистки">
+<!ENTITY reading_list_added "Страница добавлена в ваш Список для чтения">
+<!ENTITY reading_list_removed "Страница удалена из вашего Списка для чтения">
+<!ENTITY reading_list_failed "Не удалось добавить страницу в ваш Список для чтения">
+<!ENTITY reading_list_duplicate "Страница уже в вашем Списке для чтения">
+<!ENTITY page_action_dropmarker_description "Дополнительные действия">
+<!ENTITY masterpassword_create_title "Создать мастер-пароль">
+<!ENTITY masterpassword_remove_title "Удалить мастер-пароль">
+<!ENTITY masterpassword_password "Пароль">
+<!ENTITY masterpassword_confirm "Подтвердите пароль">
+<!ENTITY button_ok "OK">
+<!ENTITY button_cancel "Отмена">
+<!ENTITY button_yes "Да">
+<!ENTITY button_no "Нет">
+<!ENTITY button_clear_data "Удалить данные">
+<!ENTITY button_set "Установить">
+<!ENTITY button_clear "Очистить">
+<!ENTITY home_top_sites_title "Топ сайтов">
+<!ENTITY home_top_sites_add "Добавить сайт">
+<!ENTITY home_history_title "История">
+<!ENTITY home_bookmarks_empty "Сохраняемые вами закладки появятся здесь.">
+<!ENTITY home_last_tabs_title "Вкладки с прошлого раза">
+<!ENTITY home_last_tabs_open "Открыть все вкладки с прошлого раза">
+<!ENTITY home_last_tabs_empty "Ваши недавние вкладки появятся здесь.">
+<!ENTITY home_most_recent_title "Недавно посещённые">
+<!ENTITY home_most_recent_empty "Недавно посещённые вами веб-сайты появятся здесь.">
+<!ENTITY home_reading_list_empty "Статьи, сохранённые вами для последующего чтения, появятся здесь.">
+<!ENTITY home_reading_list_hint "СОВЕТ: Сохраняйте статьи в ваш список для чтения путём долгого нажатия на значок &#037;I, когда он появится в строке заголовка.">
+<!ENTITY home_reading_list_hint_accessible "СОВЕТ: Сохраняйте статьи в ваш список для чтения путём долгого нажатия на кнопку режима чтения, когда она появится в строке заголовка.">
+<!ENTITY pin_site_dialog_hint "Введите поисковый запрос">
+<!ENTITY filepicker_title "Выбрать файл">
+<!ENTITY filepicker_audio_title "Выбрать или записать звук">
+<!ENTITY filepicker_image_title "Выбрать или сделать фотографию">
+<!ENTITY filepicker_video_title "Выбрать или записать видео">
+<!ENTITY identity_connected_to "Вы соединены с">
+<!ENTITY identity_run_by "который управляется">
+<!ENTITY loaded_mixed_content_message "Эта страница отображает содержимое, не являющееся безопасным.">
+<!ENTITY blocked_mixed_content_message_top "&brandShortName; заблокировал содержимое, не являющееся безопасным.">
+<!ENTITY blocked_mixed_content_message_bottom "Большинство веб-сайтов будут продолжать нормально работать, даже когда это содержимое заблокировано.">
+<!ENTITY learn_more "Подробнее">
+<!ENTITY enable_protection "Включить защиту">
+<!ENTITY disable_protection "Отключить защиту">
+<!ENTITY keep_blocking "Продолжать блокировать">
+<!ENTITY private_data_success "Личные данные удалены">
+<!ENTITY private_data_fail "Не удалось удалить некоторые личные данные">
+<!ENTITY bookmarkhistory_button_import "Импорт">
+<!ENTITY bookmarkhistory_import_both "Импорт закладок и истории из Android">
+<!ENTITY bookmarkhistory_import_bookmarks "Импорт закладок из Android">
+<!ENTITY bookmarkhistory_import_history "Импорт истории из Android">
+<!ENTITY bookmarkhistory_import_wait "Пожалуйста, подождите…">
+<!ENTITY suggestions_prompt2 "Вы хотите включить поисковые предложения &formatS;?">
+<!ENTITY suggestion_for_engine "Искать &formatS2; в &formatS1;">
+<!ENTITY webapp_generic_name "Приложение">
+<!ENTITY searchable_description "Закладки и история">
+<!ENTITY devtools_remote_debugging_forward "Не забудьте настроить перенаправление портов!">
+<!ENTITY updater_start_title2 "Доступно обновление &brandShortName;">
+<!ENTITY updater_start_select2 "Нажмите для загрузки">
+<!ENTITY updater_downloading_title2 "Загрузка &brandShortName;">
+<!ENTITY updater_downloading_title_failed2 "Загрузка не удалась">
+<!ENTITY updater_downloading_select2 "Нажмите для применения обновления по завершении загрузки">
+<!ENTITY updater_downloading_retry2 "Нажмите для повтора">
+<!ENTITY updater_apply_title2 "Доступно обновление &brandShortName;">
+<!ENTITY updater_apply_select2 "Нажмите для обновления">
+<!ENTITY new_guest_session "Новая гостевая сессия">
+<!ENTITY exit_guest_session "Выйти из гостевой сессии">
+<!ENTITY guest_session_dialog_continue "Продолжить">
+<!ENTITY guest_session_dialog_cancel "Отмена">
+<!ENTITY new_guest_session_title "&brandShortName; сейчас будет перезапущен">
+<!ENTITY new_guest_session_text "Человек, использующий гостевую сессию, не увидит ничего из ваших личных данных веб-сёрфинга (таких как сохранённые пароли, история или закладки).\n\nКогда ваш гость закончит, его данные веб-сёрфинга будут удалены, а ваша сессия будет восстановлена.">
+<!ENTITY exit_guest_session_title "&brandShortName; сейчас будет перезапущен">
+<!ENTITY exit_guest_session_text "Данные веб-серфинга из этой сессии будут удалены.">
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+
+<!ENTITY syncBrand.fullName.label "Синхронизация Firefox">
+<!ENTITY syncBrand.shortName.label "Синхронизация">
+<!ENTITY sync.app.name.label "&syncBrand.fullName.label;">
+<!ENTITY sync.title.connect.label "Соединение с &syncBrand.shortName.label;">
+<!ENTITY sync.title.adddevice.label "Добавить учётную запись &syncBrand.fullName.label;">
+<!ENTITY sync.title.pair.label "Соединиться с устройством">
+<!ENTITY sync.subtitle.connect.label "Для активации вашего нового устройства выберите на устройстве «Настроить &syncBrand.shortName.label;».">
+<!ENTITY sync.subtitle.header2.label "Введите этот код на другом вашем устройстве">
+<!ENTITY sync.subtitle.connectlocation2.label "Выберите “&sync.title.pair.label;” в разделе &syncBrand.shortName.label; настроек Firefox на другом вашем устройстве.">
+<!ENTITY sync.subtitle.pair.label "Для активации выберите «Соединиться с устройством» на другом вашем устройстве.">
+<!ENTITY sync.pin.default.label "...\n...\n...\n">
+<!ENTITY sync.pin.oneline.label "...">
+<!ENTITY sync.link.show.label "Показать мне как.">
+<!ENTITY sync.link.advancedsetup.label "Дополнительно…">
+<!ENTITY sync.link.nodevice.label "У меня нет с собой устройства…">
+<!ENTITY sync.jpake.subtitle.waiting.label "Ожидание другого устройства…">
+<!ENTITY sync.subtitle.account.label "Введите данные вашей учётной записи &syncBrand.fullName.label;">
+<!ENTITY sync.input.username.label "Имя учётной записи">
+<!ENTITY sync.input.password.label "Пароль">
+<!ENTITY sync.input.key.label "Ключ восстановления">
+<!ENTITY sync.checkbox.server.label "Использовать свой сервер">
+<!ENTITY sync.input.server.label "URL сервера">
+<!ENTITY sync.title.fail.label "Не удалось настроить &syncBrand.shortName.label;">
+<!ENTITY sync.subtitle.fail.label "&syncBrand.fullName.label; не удалось соединиться с сервером. Вы хотите попробовать снова?">
+<!ENTITY sync.button.tryagain.label "Попробовать снова">
+<!ENTITY sync.button.manual.label "Настройка вручную">
+<!ENTITY sync.subtitle.nointernet.label "Нет соединения с Интернетом.">
+<!ENTITY sync.subtitle.failaccount.label "Не удалось создать учётную запись на вашем устройстве.">
+<!ENTITY sync.subtitle.failmultiple.label "У вас установлено более одного Firefox? В настоящее время, &syncBrand.fullName.label; поддерживает работу только с одной установкой Firefox. Чтобы использовать &syncBrand.shortName.label;, пожалуйста, удалите другие установки.">
+<!ENTITY sync.title.success.label "Настройка завершена">
+<!ENTITY sync.subtitle.success.label1 "Ваши данные сейчас загружаются в фоновом режиме. Вы можете перейти в Параметры для управления вашей учётной записью, или начать сёрфинг в &brandShortName;.">
+<!ENTITY sync.settings.label "Параметры">
+<!ENTITY sync.subtitle.manage.label1 "Ваша учётная запись &syncBrand.fullName.label; уже настроена. Вы можете перейти в Параметры для управления вашей учётной записью, или запустить &brandShortName;.">
+<!ENTITY sync.pair.tryagain.label "Пожалуйста, попробуйте снова.">
+<!ENTITY sync.pair.connectlocation.label "Для активации вашего нового устройства выберите на устройстве «Настроить &syncBrand.shortName.label;», а затем выберите «У меня есть учётная запись».">
+<!ENTITY sync.settings.options.label "Настройки">
+<!ENTITY sync.summary.pair.label "Связать другое устройство с вашей учётной записью &syncBrand.shortName.label;">
+<!ENTITY sync.configure.engines.title.label "Что синхронизировать">
+<!ENTITY sync.configure.engines.sync.my.title.label "Синхронизировать ваши…">
+<!ENTITY sync.configure.engines.title.bookmarks "Закладки">
+<!ENTITY sync.configure.engines.title.passwords "Пароли">
+<!ENTITY sync.configure.engines.title.history "Историю">
+<!ENTITY sync.configure.engines.title.tabs "Вкладки">
+<!ENTITY sync.button.cancel.label "Отмена">
+<!ENTITY sync.button.connect.label "Соединиться">
+<!ENTITY sync.button.ok.label "OK">
+<!ENTITY sync.account.label.label "&syncBrand.fullName.label;">
+<!ENTITY bookmarks.folder.menu.label "Меню закладок">
+<!ENTITY bookmarks.folder.places.label "">
+<!ENTITY bookmarks.folder.tags.label "Метки">
+<!ENTITY bookmarks.folder.toolbar.label "Панель закладок">
+<!ENTITY bookmarks.folder.unfiled.label "Неподшитые закладки">
+<!ENTITY bookmarks.folder.desktop.label "Закладки десктопа">
+<!ENTITY bookmarks.folder.mobile.label "Мобильные закладки">
+<!ENTITY bookmarks.folder.readinglist.label "Список для чтения">
+<!ENTITY bookmarks.folder.pinned.label "Закреплённые">
+<!ENTITY sync.notification.oneaccount.label "Только одна учётная запись &syncBrand.fullName.label; поддерживается.">
+<!ENTITY sync.notification.configure.saved "Ваши настройки были сохранены.">
+<!ENTITY sync.invalidcreds.label "Неверное имя учётной записи или пароль.">
+<!ENTITY sync.invalidserver.label "Пожалуйста, введите корректный URL сервера">
+<!ENTITY sync.verifying.label "Проверка…">
+<!ENTITY sync.new.recoverykey.status.incorrect "Некорректный ключ восстановления. Пожалуйста, попробуйте ещё раз.">
+<!ENTITY sync.title.send.tab.label "Отправка вкладки на устройства">
+<!ENTITY sync.button.send.label "Отправить">
+<!ENTITY sync.button.set.up.sync.label "Настроить &syncBrand.shortName.label;">
+<!ENTITY sync.title.redirect.to.set.up.sync.label "Настройка &syncBrand.shortName.label; для отправки вкладок">
+<!ENTITY sync.text.redirect.to.set.up.sync.label "Настройка &syncBrand.fullName.label; на вашем устройстве для отправки вкладок на другие устройства.">
+<!ENTITY sync.text.tab.sent.label "Ваша вкладка была отправлена!">
+<!ENTITY sync.text.tab.not.sent.label "При отправке вашей вкладки возникла проблема.">
+
+<!-- C-style format strings. -->
+<!ENTITY formatS "&#037;s">
+<!ENTITY formatS1 "&#037;1&#036;s">
+<!ENTITY formatS2 "&#037;2&#036;s">
+<!ENTITY formatD "&#037;d">
+]>
+
+<resources>
+  <string name="moz_app_displayname">Nightly</string>
+  <string name="android_package_name">org.mozilla.fennec</string>
+  <string name="content_authority_db_browser">org.mozilla.fennec.db.browser</string>
+  <string name="moz_android_shared_account_type">org.mozilla.fennec_sync</string>
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+
+  <!-- Used for setup success. -->
+  <string name="brand_short_name">&brandShortName;</string>
+
+  <string name="sync_app_name">&sync.app.name.label;</string>
+  <string name="sync_title_connect">&sync.title.adddevice.label;</string>
+  <string name="sync_title_pair">&sync.title.pair.label;</string>
+
+  <!-- J-PAKE PIN Screen -->
+  <string name="sync_subtitle_header">&sync.subtitle.header2.label;</string>
+  <string name="sync_subtitle_connect">&sync.subtitle.connectlocation2.label;</string>
+  <string name="sync_subtitle_pair">&sync.pair.connectlocation.label;</string>
+  <string name="sync_pin_default">&sync.pin.oneline.label;</string>
+  <string name="sync_link_show"><u>&sync.link.show.label;</u></string>
+  <string name="sync_link_advancedsetup"><u>&sync.link.advancedsetup.label;</u></string>
+
+  <!-- J-PAKE Waiting Screen -->
+  
+  <string name="sync_jpake_subtitle_waiting">&sync.jpake.subtitle.waiting.label;</string>
+
+  <!-- Account Login Screen -->
+  <string name="sync_subtitle_account">&sync.subtitle.account.label;</string>
+  <string name="sync_input_username">&sync.input.username.label;</string>
+  <string name="sync_input_password">&sync.input.password.label;</string>
+  <string name="sync_input_key">&sync.input.key.label;</string>
+  <string name="sync_checkbox_server">&sync.checkbox.server.label;</string>
+  <string name="sync_input_server">&sync.input.server.label;</string>
+  
+  <!-- Setup Fail -->
+  <string name="sync_title_fail">&sync.title.fail.label;</string>
+  <string name="sync_subtitle_fail">&sync.subtitle.fail.label;</string>
+  <string name="sync_button_tryagain">&sync.button.tryagain.label;</string>
+  <string name="sync_button_manual">&sync.button.manual.label;</string>
+  <string name="sync_subtitle_nointernet">&sync.subtitle.nointernet.label;</string>
+  <string name="sync_subtitle_failaccount">&sync.subtitle.failaccount.label;</string>
+  <string name="sync_subtitle_failmultiple">&sync.subtitle.failmultiple.label;</string>
+  
+  <!-- Setup Success -->
+  <string name="sync_title_success">&sync.title.success.label;</string>
+  <string name="sync_subtitle_success">&sync.subtitle.success.label1;</string>
+  <string name="sync_settings">&sync.settings.label;</string>
+  <string name="sync_subtitle_manage">&sync.subtitle.manage.label1;</string>
+  
+  <!-- Pair Device -->
+  <string name="sync_pair_tryagain">&sync.pair.tryagain.label;</string>
+
+  <!-- Firefox SyncAdapter Settings Screen -->
+  <string name="sync_settings_options">&sync.settings.options.label;</string>
+  <string name="sync_settings_summary_pair">&sync.summary.pair.label;</string>
+
+  <!-- Configure Engines -->
+  <string name="sync_configure_engines_title">&sync.configure.engines.title.label;</string>
+  <string name="sync_configure_engines_sync_my_title">&sync.configure.engines.sync.my.title.label;</string>
+  <string name="sync_configure_engines_title_bookmarks">&sync.configure.engines.title.bookmarks;</string>
+  <string name="sync_configure_engines_title_passwords">&sync.configure.engines.title.passwords;</string>
+  <string name="sync_configure_engines_title_history">&sync.configure.engines.title.history;</string>
+  <string name="sync_configure_engines_title_tabs">&sync.configure.engines.title.tabs;</string>
+
+  <!-- Common text -->
+  <string name="sync_button_cancel">&sync.button.cancel.label;</string>
+  <string name="sync_button_connect">&sync.button.connect.label;</string>
+  <string name="sync_button_ok">&sync.button.ok.label;</string>
+  
+  <!-- Account strings -->
+  <string name="sync_account_label">&sync.account.label.label;</string>
+  
+  <!-- Bookmark folder strings -->
+  <string name="bookmarks_folder_menu">&bookmarks.folder.menu.label;</string>
+  <string name="bookmarks_folder_places">&bookmarks.folder.places.label;</string>
+  <string name="bookmarks_folder_tags">&bookmarks.folder.tags.label;</string>
+  <string name="bookmarks_folder_toolbar">&bookmarks.folder.toolbar.label;</string>
+  <string name="bookmarks_folder_unfiled">&bookmarks.folder.unfiled.label;</string>
+  <string name="bookmarks_folder_desktop">&bookmarks.folder.desktop.label;</string>
+  <string name="bookmarks_folder_mobile">&bookmarks.folder.mobile.label;</string>
+  <string name="bookmarks_folder_reading_list">&bookmarks.folder.readinglist.label;</string>
+  <string name="bookmarks_folder_pinned">&bookmarks.folder.pinned.label;</string>
+
+  <!-- Notification strings -->
+  <string name="sync_notification_oneaccount">&sync.notification.oneaccount.label;</string>
+  <string name="sync_notification_savedprefs">&sync.notification.configure.saved;</string>
+
+  <!-- Incorrect settings and changing credentials. -->
+  <string name="sync_invalidcreds_label">&sync.invalidcreds.label;</string>
+  <string name="sync_invalidserver_label">&sync.invalidserver.label;</string>
+  <string name="sync_verifying_label">&sync.verifying.label;</string>
+  <string name="sync_new_recoverykey_status_incorrect">&sync.new.recoverykey.status.incorrect;</string>
+
+  <!-- Send tab to device. -->
+  <string name="sync_new_tab">&new_tab;</string>
+  <string name="sync_title_send_tab">&sync.title.send.tab.label;</string>
+  <string name="sync_button_send">&sync.button.send.label;</string>
+  <string name="sync_button_set_up_sync">&sync.button.set.up.sync.label;</string>
+  <string name="sync_title_redirect_to_set_up_sync">&sync.title.redirect.to.set.up.sync.label;</string>
+  <string name="sync_text_redirect_to_set_up_sync">&sync.text.redirect.to.set.up.sync.label;</string>
+  <string name="sync_text_tab_sent">&sync.text.tab.sent.label;</string>
+  <string name="sync_text_tab_not_sent">&sync.text.tab.not.sent.label;</string>
+  <string name="no_space_to_start_error">&no_space_to_start_error;</string>
+  <string name="error_loading_file">&error_loading_file;</string>
+
+  <string name="bookmarks_title">&bookmarks_title;</string>
+  <string name="history_title">&history_title;</string>
+  <string name="reading_list_title">&reading_list_title;</string>
+
+  <string name="switch_to_tab">&switch_to_tab;</string>
+
+  <string name="crash_reporter_title">&crash_reporter_title;</string>
+  <string name="crash_message2">&crash_message2;</string>
+  <string name="crash_send_report_message3">&crash_send_report_message3;</string>
+  <string name="crash_include_url2">&crash_include_url2;</string>
+  <string name="crash_sorry">&crash_sorry;</string>
+  <string name="crash_comment">&crash_comment;</string>
+  <string name="crash_allow_contact2">&crash_allow_contact2;</string>
+  <string name="crash_email">&crash_email;</string>
+  <string name="crash_closing_alert">&crash_closing_alert;</string>
+  <string name="sending_crash_report">&sending_crash_report;</string>
+  <string name="crash_close_label">&crash_close_label;</string>
+  <string name="crash_restart_label">&crash_restart_label;</string>
+  <string name="exit_label">&exit_label;</string>
+
+  <string name="launcher_shortcuts_title">&launcher_shortcuts_title;</string>
+  <string name="launcher_shortcuts_empty">&launcher_shortcuts_empty;</string>
+
+  <string name="choose_file">&choose_file;</string>
+
+  <string name="url_bar_default_text">&url_bar_default_text;</string>
+
+  <string name="quit">&quit;</string>
+  <string name="bookmark">&bookmark;</string>
+  <string name="bookmark_added">&bookmark_added;</string>
+  <string name="bookmark_removed">&bookmark_removed;</string>
+  <string name="bookmark_updated">&bookmark_updated;</string>
+  <string name="bookmark_options">&bookmark_options;</string>
+
+  <string name="history_today_section">&history_today_section;</string>
+  <string name="history_yesterday_section">&history_yesterday_section;</string>
+  <string name="history_week_section">&history_week_section;</string>
+  <string name="history_older_section">&history_older_section;</string>
+
+  <string name="share">&share;</string>
+  <string name="share_title">&share_title;</string>
+  <string name="share_image_failed">&share_image_failed;</string>
+  <string name="save_as_pdf">&save_as_pdf;</string>
+  <string name="find_in_page">&find_in_page;</string>
+  <string name="desktop_mode">&desktop_mode;</string>
+  <string name="tools">&tools;</string>
+
+  <string name="find_text">&find_text;</string>
+  <string name="find_prev">&find_prev;</string>
+  <string name="find_next">&find_next;</string>
+  <string name="find_close">&find_close;</string>
+
+  <string name="settings">&settings;</string>
+  <string name="settings_title">&settings_title;</string>
+  <string name="pref_category_advanced">&pref_category_advanced;</string>
+  <string name="pref_category_customize">&pref_category_customize;</string>
+  <string name="pref_category_search">&pref_category_search2;</string>
+  <string name="pref_category_display">&pref_category_display;</string>
+  <string name="pref_category_privacy_short">&pref_category_privacy_short;</string>
+  <string name="pref_category_vendor">&pref_category_vendor;</string>
+  <string name="pref_category_datareporting">&pref_category_datareporting;</string>
+  <string name="pref_category_installed_search_engines">&pref_category_installed_search_engines;</string>
+  <string name="pref_category_add_search_providers">&pref_category_add_search_providers;</string>
+  <string name="pref_search_tip">&pref_search_tip;</string>
+  <string name="pref_category_devtools">&pref_category_devtools;</string>
+  <string name="pref_developer_remotedebugging">&pref_developer_remotedebugging;</string>
+  <string name="pref_developer_remotedebugging_docs">&pref_developer_remotedebugging_docs;</string>
+
+  <string name="pref_header_customize">&pref_header_customize;</string>
+  <string name="pref_header_display">&pref_header_display;</string>
+  <string name="pref_header_privacy_short">&pref_header_privacy_short;</string>
+  <string name="pref_header_vendor">&pref_header_vendor;</string>
+  <string name="pref_header_devtools">&pref_header_devtools;</string>
+
+  <string name="pref_remember_signons">&pref_remember_signons;</string>
+
+  <string name="pref_cookies_menu">&pref_cookies_menu;</string>
+  <string name="pref_cookies_accept_all">&pref_cookies_accept_all;</string>
+  <string name="pref_cookies_not_accept_foreign">&pref_cookies_not_accept_foreign;</string>
+  <string name="pref_cookies_disabled">&pref_cookies_disabled;</string>
+
+  <string name="pref_donottrack_menu">&pref_donottrack_menu;</string>
+  <string name="pref_donottrack_disallow_tracking">&pref_donottrack_disallow_tracking;</string>
+  <string name="pref_donottrack_allow_tracking">&pref_donottrack_allow_tracking;</string>
+  <string name="pref_donottrack_no_pref">&pref_donottrack_no_pref;</string>
+
+  <string name="pref_char_encoding">&pref_char_encoding;</string>
+  <string name="pref_char_encoding_on">&pref_char_encoding_on;</string>
+  <string name="pref_char_encoding_off">&pref_char_encoding_off;</string>
+  <string name="pref_clear_private_data">&pref_clear_private_data;</string>
+  <string name="pref_plugins">&pref_plugins;</string>
+  <string name="pref_plugins_enabled">&pref_plugins_enabled;</string>
+  <string name="pref_plugins_tap_to_play">&pref_plugins_tap_to_play;</string>
+  <string name="pref_plugins_disabled">&pref_plugins_disabled;</string>
+  <string name="pref_text_size">&pref_text_size;</string>
+  <string name="pref_font_size_tiny">&pref_font_size_tiny;</string>
+  <string name="pref_font_size_small">&pref_font_size_small;</string>
+  <string name="pref_font_size_medium">&pref_font_size_medium;</string>
+  <string name="pref_font_size_large">&pref_font_size_large;</string>
+  <string name="pref_font_size_xlarge">&pref_font_size_xlarge;</string>
+  <string name="pref_font_size_set">&pref_font_size_set;</string>
+  <string name="pref_font_size_adjust_char">&pref_font_size_adjust_char;</string>
+  <string name="pref_font_size_preview_text">&pref_font_size_preview_text;</string>
+  <string name="pref_reflow_on_zoom">&pref_reflow_on_zoom4;</string>
+  <string name="pref_restore">&pref_restore;</string>
+  <string name="pref_restore_always">&pref_restore_always;</string>
+  <string name="pref_restore_quit">&pref_restore_quit;</string>
+  <string name="pref_show_product_announcements">&pref_show_product_announcements;</string>
+  <string name="pref_sync">&pref_sync;</string>
+  <string name="pref_search_suggestions">&pref_search_suggestions;</string>
+  <string name="pref_private_data_history">&pref_private_data_history;</string>
+  <string name="pref_private_data_formdata">&pref_private_data_formdata;</string>
+  <string name="pref_private_data_cookies2">&pref_private_data_cookies2;</string>
+  <string name="pref_private_data_passwords">&pref_private_data_passwords;</string>
+  <string name="pref_private_data_cache">&pref_private_data_cache;</string>
+  <string name="pref_private_data_offlineApps">&pref_private_data_offlineApps;</string>
+  <string name="pref_private_data_siteSettings">&pref_private_data_siteSettings2;</string>
+  <string name="pref_private_data_downloadFiles">&pref_private_data_downloadFiles;</string>
+  <string name="pref_import_android">&pref_import_android;</string>
+  <string name="pref_update_autodownload">&pref_update_autodownload;</string>
+  <string name="pref_update_autodownload_wifi">&pref_update_autodownload_wifi;</string>
+  <string name="pref_update_autodownload_disabled">&pref_update_autodownload_disabled;</string>
+  <string name="pref_update_autodownload_enabled">&pref_update_autodownload_enabled;</string>
+
+
+  <string name="pref_about_firefox">&pref_about_firefox;</string>
+  <string name="pref_vendor_faqs">&pref_vendor_faqs;</string>
+  <string name="pref_vendor_feedback">&pref_vendor_feedback;</string>
+
+  <!-- Strings used in default search provider config preferences menu -->
+  <string name="pref_search_set_default">&pref_search_set_default;</string>
+  <string name="pref_search_default">&pref_search_default;</string>
+  <string name="pref_search_remove">&pref_search_remove;</string>
+  <string name="pref_search_last_toast">&pref_search_last_toast;</string>
+
+  <string name="datareporting_notification_title">&datareporting_notification_title;</string>
+  <string name="datareporting_notification_action_long">&datareporting_notification_action_long;</string>
+  <string name="datareporting_notification_action">&datareporting_notification_action;</string>
+  <string name="datareporting_notification_summary">&datareporting_notification_summary;</string>
+  <string name="datareporting_notification_summary_short">&datareporting_notification_summary_short;</string>
+  <string name="datareporting_notification_ticker_text">&datareporting_notification_ticker_text;</string>
+
+  <string name="datareporting_telemetry_title">&datareporting_telemetry_title;</string>
+  <string name="datareporting_telemetry_summary">&datareporting_telemetry_summary;</string>
+  <string name="datareporting_fhr_title">&datareporting_fhr_title;</string>
+  <string name="datareporting_fhr_summary2">&datareporting_fhr_summary2;</string>
+  <string name="datareporting_abouthr_title">&datareporting_abouthr_title;</string>
+  <string name="datareporting_crashreporter_title_short">&datareporting_crashreporter_title_short;</string>
+  <string name="datareporting_crashreporter_summary">&datareporting_crashreporter_summary;</string>
+  <string name="datareporting_wifi_title">&datareporting_wifi_title;</string>
+  <string name="datareporting_wifi_summary">&datareporting_wifi_summary;</string>
+
+  <string name="go">&go;</string>
+  <string name="search">&search;</string>
+  <string name="reload">&reload;</string>
+  <string name="forward">&forward;</string>
+  <string name="menu">&menu;</string>
+  <string name="back">&back;</string>
+  <string name="stop">&stop;</string>
+  <string name="site_security">&site_security;</string>
+  <string name="close_tab">&close_tab;</string>
+  <string name="new_tab_opened">&new_tab_opened;</string>
+  <string name="one_tab">&one_tab;</string>
+  <string name="num_tabs">&num_tabs2;</string>
+  <string name="addons">&addons;</string>
+  <string name="downloads">&downloads;</string>
+  <string name="apps">&apps;</string>
+  <string name="char_encoding">&char_encoding;</string>
+  <string name="new_tab">&new_tab;</string>
+  <string name="new_private_tab">&new_private_tab;</string>
+  <string name="close_all_tabs">&close_all_tabs;</string>
+  <string name="tabs_normal">&tabs_normal;</string>
+  <string name="tabs_private">&tabs_private;</string>
+  <string name="tabs_synced">&tabs_synced;</string>
+
+  <string name="site_settings_title">&site_settings_title3;</string>
+  <string name="site_settings_cancel">&site_settings_cancel;</string>
+  <string name="site_settings_clear">&site_settings_clear;</string>
+  <string name="site_settings_no_settings">&site_settings_no_settings;</string>
+
+  <string name="reading_list_added">&reading_list_added;</string>
+  <string name="reading_list_removed">&reading_list_removed;</string>
+  <string name="reading_list_failed">&reading_list_failed;</string>
+  <string name="reading_list_duplicate">&reading_list_duplicate;</string>
+
+  <string name="page_action_dropmarker_description">&page_action_dropmarker_description;</string>
+
+  <string name="contextmenu_open_new_tab">&contextmenu_open_new_tab;</string>
+  <string name="contextmenu_open_private_tab">&contextmenu_open_private_tab;</string>
+  <string name="contextmenu_open_in_reader">&contextmenu_open_in_reader;</string>
+  <string name="contextmenu_remove">&contextmenu_remove;</string>
+  <string name="contextmenu_add_to_launcher">&contextmenu_add_to_launcher;</string>
+  <string name="contextmenu_share">&contextmenu_share;</string>
+  <string name="contextmenu_pasteandgo">&contextmenu_pasteandgo;</string>
+  <string name="contextmenu_paste">&contextmenu_paste;</string>
+  <string name="contextmenu_copyurl">&contextmenu_copyurl;</string>
+  <string name="contextmenu_edit_bookmark">&contextmenu_edit_bookmark;</string>
+  <string name="contextmenu_subscribe">&contextmenu_subscribe;</string>
+  <string name="contextmenu_site_settings">&contextmenu_site_settings;</string>
+  <string name="contextmenu_top_sites_edit">&contextmenu_top_sites_edit;</string>
+  <string name="contextmenu_top_sites_pin">&contextmenu_top_sites_pin;</string>
+  <string name="contextmenu_top_sites_unpin">&contextmenu_top_sites_unpin;</string>
+  <string name="contextmenu_add_search_engine">&contextmenu_add_search_engine;</string>
+
+  <string name="pref_titlebar_mode">&pref_titlebar_mode;</string>
+  <string name="pref_titlebar_mode_title">&pref_titlebar_mode_title;</string>
+  <string name="pref_titlebar_mode_url">&pref_titlebar_mode_url;</string>
+
+  <string name="history_removed">&history_removed;</string>
+
+  <string name="bookmark_edit_title">&bookmark_edit_title;</string>
+  <string name="bookmark_edit_name">&bookmark_edit_name;</string>
+  <string name="bookmark_edit_location">&bookmark_edit_location;</string>
+  <string name="bookmark_edit_keyword">&bookmark_edit_keyword;</string>
+
+  <string name="pref_use_master_password">&pref_use_master_password;</string>
+  <string name="masterpassword_create_title">&masterpassword_create_title;</string>
+  <string name="masterpassword_remove_title">&masterpassword_remove_title;</string>
+  <string name="masterpassword_password">&masterpassword_password;</string>
+  <string name="masterpassword_confirm">&masterpassword_confirm;</string>
+
+  <string name="button_ok">&button_ok;</string>
+  <string name="button_cancel">&button_cancel;</string>
+  <string name="button_clear_data">&button_clear_data;</string>
+  <string name="button_set">&button_set;</string>
+  <string name="button_clear">&button_clear;</string>
+  <string name="button_yes">&button_yes;</string>
+  <string name="button_no">&button_no;</string>
+
+  <string name="home_top_sites_title">&home_top_sites_title;</string>
+  <string name="home_top_sites_add">&home_top_sites_add;</string>
+  <string name="home_history_title">&home_history_title;</string>
+  <string name="home_bookmarks_empty">&home_bookmarks_empty;</string>
+  <string name="home_last_tabs_title">&home_last_tabs_title;</string>
+  <string name="home_last_tabs_open">&home_last_tabs_open;</string>
+  <string name="home_last_tabs_empty">&home_last_tabs_empty;</string>
+  <string name="home_most_recent_title">&home_most_recent_title;</string>
+  <string name="home_most_recent_empty">&home_most_recent_empty;</string>
+  <string name="home_reading_list_empty">&home_reading_list_empty;</string>
+  <string name="home_reading_list_hint">&home_reading_list_hint;</string>
+  <string name="home_reading_list_hint_accessible">&home_reading_list_hint_accessible;</string>
+  <string name="pin_site_dialog_hint">&pin_site_dialog_hint;</string>
+
+  <string name="filepicker_title">&filepicker_title;</string>
+  <string name="filepicker_audio_title">&filepicker_audio_title;</string>
+  <string name="filepicker_image_title">&filepicker_image_title;</string>
+  <string name="filepicker_video_title">&filepicker_video_title;</string>
+
+  <!-- Default bookmarks. Use bookmarks titles shared with XUL from mobile's
+       profile/bookmarks.inc. Don't expose the URLs to L10N. -->
+  <string name="bookmarkdefaults_title_aboutfirefox">Firefox: О вашем браузере</string>
+  <string name="bookmarkdefaults_url_aboutfirefox">about:firefox</string>
+  <string name="bookmarkdefaults_favicon_aboutfirefox">chrome/chrome/content/branding/favicon64.png</string>
+
+  <string name="bookmarkdefaults_title_addons">Firefox: Настройка с помощью дополнений</string>
+  <string name="bookmarkdefaults_url_addons">https://addons.mozilla.org/ru/android/</string>
+
+  <string name="bookmarkdefaults_title_support">Firefox: Поддержка</string>
+  <string name="bookmarkdefaults_url_support">http://support.mozilla.org/ru/products/mobile</string>
+  <string name="bookmarkdefaults_favicon_abouthome">chrome/chrome/content/branding/favicon64.png</string>
+
+  <!-- Site identity popup -->
+  <string name="identity_connected_to">&identity_connected_to;</string>
+  <string name="identity_run_by">&identity_run_by;</string>
+  <string name="loaded_mixed_content_message">&loaded_mixed_content_message;</string>
+  <string name="blocked_mixed_content_message_top">&blocked_mixed_content_message_top;</string>
+  <string name="blocked_mixed_content_message_bottom">&blocked_mixed_content_message_bottom;</string>
+  <string name="learn_more">&learn_more;</string>
+  <string name="enable_protection">&enable_protection;</string>
+  <string name="disable_protection">&disable_protection;</string>
+  <string name="keep_blocking">&keep_blocking;</string>
+
+  <!-- Clear private data -->
+  <string name="private_data_success">&private_data_success;</string>
+  <string name="private_data_fail">&private_data_fail;</string>
+
+  <!-- Bookmark import/export -->
+  <string name="bookmarkhistory_button_import">&bookmarkhistory_button_import;</string>
+  <string name="bookmarkhistory_import_both">&bookmarkhistory_import_both;</string>
+  <string name="bookmarkhistory_import_bookmarks">&bookmarkhistory_import_bookmarks;</string>
+  <string name="bookmarkhistory_import_history">&bookmarkhistory_import_history;</string>
+  <string name="bookmarkhistory_import_wait">&bookmarkhistory_import_wait;</string>
+
+  <string name="webapp_generic_name">&webapp_generic_name;</string>
+
+  <string name="searchable_description">&searchable_description;</string>
+
+  <string name="devtools_remote_debugging_forward">&devtools_remote_debugging_forward;</string>
+
+  <!-- Updater notifications -->
+  <string name="updater_start_title">&updater_start_title2;</string>
+  <string name="updater_start_select">&updater_start_select2;</string>
+
+  <string name="updater_downloading_title">&updater_downloading_title2;</string>
+  <string name="updater_downloading_title_failed">&updater_downloading_title_failed2;</string>
+  <string name="updater_downloading_select">&updater_downloading_select2;</string>
+  <string name="updater_downloading_retry">&updater_downloading_retry2;</string>
+
+  <string name="updater_apply_title">&updater_apply_title2;</string>
+  <string name="updater_apply_select">&updater_apply_select2;</string>
+
+  <!-- Search suggestions opt-in -->
+  <string name="suggestions_prompt">&suggestions_prompt2;</string>
+
+  <string name="suggestion_for_engine">&suggestion_for_engine;</string>
+
+  <!-- Set Image Notifications -->
+  <string name="set_image_fail">&set_image_fail;</string>
+  <string name="set_image_chooser_title">&set_image_chooser_title;</string>
+
+  <!-- Contacts API -->
+  <string name="contacts_account_chooser_dialog_title">Share contacts from...</string>
+
+
+  <!-- Guest mode -->
+  <string name="new_guest_session">&new_guest_session;</string>
+  <string name="exit_guest_session">&exit_guest_session;</string>
+  <string name="guest_session_dialog_continue">&guest_session_dialog_continue;</string>
+  <string name="guest_session_dialog_cancel">&guest_session_dialog_cancel;</string>
+  <string name="new_guest_session_title">&new_guest_session_title;</string>
+  <string name="new_guest_session_text">&new_guest_session_text;</string>
+
+  <string name="exit_guest_session_title">&exit_guest_session_title;</string>
+  <string name="exit_guest_session_text">&exit_guest_session_text;</string>
+</resources>
