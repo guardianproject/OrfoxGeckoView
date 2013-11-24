@@ -5,6 +5,7 @@
    android:showAsAction="ifRoom|collapseActionView"
    android:title="Browse"
    android:actionLayout="@layout/activity_actionview_edittext"
+   android:icon="@android:drawable/ic_menu_search"
 />
     
     <item

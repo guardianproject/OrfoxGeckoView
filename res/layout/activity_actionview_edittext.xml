@@ -6,18 +6,20 @@
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content">
+        <!-- 
             <Button android:id="@+id/go_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:text="@string/go_button_text"/>
+                 -->
             <EditText android:id="@+id/url_bar"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:inputType="textUri"
-                android:layout_toLeftOf="@id/go_button"
                 android:singleLine="true"
+                android:hint="Enter Search or Address"
                 android:text="@string/default_url"/>
     </RelativeLayout>
 
