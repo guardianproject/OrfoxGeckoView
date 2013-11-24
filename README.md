@@ -1,3 +1,8 @@
+
+This project was originally based upon the geckobrowser sample (see below) and the Orweb browser project from Guardian Project.
+
+
+******
 geckobrowser
 ============
 
