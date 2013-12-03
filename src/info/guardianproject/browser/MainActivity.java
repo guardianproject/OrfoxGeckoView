@@ -71,15 +71,9 @@ public class MainActivity extends Activity {
 				
 				if (event != null && event.getKeyCode() == KeyEvent.KEYCODE_ENTER)
 				{
-					 GeckoView.Browser browser = mGeckoView.getCurrentBrowser();
-		                
-					 	String newUrl = OrwebUtil.smartUrlFilter(mUrlBar.getText().toString(), mDoJavascript);
-		                
-		                if (browser == null) {
-		                    browser = mGeckoView.addBrowser(newUrl);
-		                } else {
-		                    browser.loadUrl(newUrl);
-		                }
+					 		                
+					 	String newUrl = OrwebUtil.smartUrlFilter(mUrlBar.getText().toString(), mDoJavascript);		                
+					 	mGeckoView.addBrowser(newUrl);
 				}
 				
 				return false;
@@ -119,12 +113,24 @@ public class MainActivity extends Activity {
         return true;
     }
 
+    private void finishBrowser ()
+    {
+    
+    	for (Browser browser : mGeckoView.getBrowsers())
+    	{
+    		mGeckoView.removeBrowser(browser);
+    	}
+    	
+        mGeckoView.destroy();
+        finish();
+    }
+    
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle item selection
         switch (item.getItemId()) {
             case R.id.action_exit:
-                finish();
+                finishBrowser();
                 return true;
             	
             default:
