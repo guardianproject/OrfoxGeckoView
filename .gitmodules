@@ -1,3 +1,6 @@
 [submodule "external/netcipher"]
 	path = external/netcipher
 	url = https://github.com/guardianproject/OnionKit.git
+[submodule "external/Orchid"]
+	path = external/Orchid
+	url = https://github.com/subgraph/Orchid.git
