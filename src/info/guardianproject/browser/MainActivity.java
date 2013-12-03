@@ -1,5 +1,6 @@
 package info.guardianproject.browser;
 
+import info.guardianproject.browser.gecko.R;
 import org.mozilla.gecko.GeckoView;
 import org.mozilla.gecko.GeckoView.Browser;
 import org.mozilla.gecko.GeckoView.PromptResult;
@@ -30,6 +31,8 @@ public class MainActivity extends Activity {
 
     GeckoView mGeckoView;
     EditText mUrlBar;
+    
+    private boolean mDoJavascript = false;
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,11 +73,12 @@ public class MainActivity extends Activity {
 				{
 					 GeckoView.Browser browser = mGeckoView.getCurrentBrowser();
 		                
+					 	String newUrl = OrwebUtil.smartUrlFilter(mUrlBar.getText().toString(), mDoJavascript);
 		                
 		                if (browser == null) {
-		                    browser = mGeckoView.addBrowser(mUrlBar.getText().toString());
+		                    browser = mGeckoView.addBrowser(newUrl);
 		                } else {
-		                    browser.loadUrl(mUrlBar.getText().toString());
+		                    browser.loadUrl(newUrl);
 		                }
 				}
 				
@@ -82,6 +86,16 @@ public class MainActivity extends Activity {
 			}
         	
         	
+        });
+        
+        Button btnClear = (Button) view.findViewById(R.id.clear_button);
+        btnClear.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+            	
+            	mUrlBar.setText("");
+                
+            }
         });
         
         /*
@@ -137,7 +151,7 @@ public class MainActivity extends Activity {
             setProxyPrefs();
             setPrivacyPrefs();
             setCipherSuites();
-            setJavascriptEnabled(false);
+            setJavascriptEnabled(mDoJavascript);
             
             setUserAgent("Mozilla/5.0 (Windows NT 6.1; rv:17.0) Gecko/20100101 Firefox/17.0","en-us,en;q=0.5");
             
@@ -277,7 +291,6 @@ public class MainActivity extends Activity {
 
 		@Override
 		public void onPageShow(GeckoView arg0, Browser arg1) {
-			// TODO Auto-generated method stub
 			super.onPageShow(arg0, arg1);
 			
 			   setProgressBarIndeterminateVisibility(Boolean.FALSE); 
@@ -286,7 +299,6 @@ public class MainActivity extends Activity {
 
 		@Override
 		public void onPageStart(GeckoView arg0, Browser arg1, String arg2) {
-			// TODO Auto-generated method stub
 			super.onPageStart(arg0, arg1, arg2);
 			
 			mUrlBar.setText(arg2);
@@ -300,7 +312,6 @@ public class MainActivity extends Activity {
 
 		@Override
 		public void onPageStop(GeckoView arg0, Browser arg1, boolean arg2) {
-			// TODO Auto-generated method stub
 			super.onPageStop(arg0, arg1, arg2);
 			
 			   setProgressBarIndeterminateVisibility(Boolean.FALSE); 
@@ -310,9 +321,7 @@ public class MainActivity extends Activity {
 		@Override
 		public void onReceivedFavicon(GeckoView arg0, Browser arg1,
 				String arg2, int arg3) {
-			// TODO Auto-generated method stub
-			super.onReceivedFavicon(arg0, arg1, arg2, arg3);
-			
+			//ignore - we don't want to load favicons for now
 		}
         
         
