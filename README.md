@@ -1,4 +1,4 @@
-This project was originally based upon the geckobrowser sample (see below) and the Orweb browser project from Guardian Project. It is basically feature complete (and MORE) with Orweb, but without any preference screen yet! 
+This project was originally based upon the geckobrowser sample (https://github.com/mfinkle/geckobrowser) and the Orweb browser project from Guardian Project. It is basically feature complete (and MORE) with Orweb, but without any preference screen yet! 
 
 Project tracker: https://dev.guardianproject.info/projects/orweb
 Nightly builds: https://guardianproject.info/builds/Orfox/
