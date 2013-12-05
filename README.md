@@ -7,18 +7,18 @@ Here are the privacy-enhancing preferences that are on by default:
 
 Match Tor Browser "generic" user-agent:
 
-  setUserAgent("Mozilla/5.0 (Windows NT 6.1; rv:17.0) Gecko/20100101 Firefox/17.0","en-us,en;q=0.5");
+		setUserAgent("Mozilla/5.0 (Windows NT 6.1; rv:17.0) Gecko/20100101 Firefox/17.0","en-us,en;q=0.5");
 
 Turn on proxying to local Tor / Orbot proxying by default:
                
-    PrefsHelper.setPref("network.proxy.type",1); //manual proxy settings
+		PrefsHelper.setPref("network.proxy.type",1); //manual proxy settings
     
-    PrefsHelper.setPref("network.proxy.http","localhost"); //manual proxy settings
-    PrefsHelper.setPref("network.proxy.http_port",8118); //manual proxy settings
+		PrefsHelper.setPref("network.proxy.http","localhost"); //manual proxy settings
+		PrefsHelper.setPref("network.proxy.http_port",8118); //manual proxy settings
     
-    PrefsHelper.setPref("network.proxy.socks","localhost"); //manual proxy settings
-    PrefsHelper.setPref("network.proxy.socks_port",9050); //manual proxy settings
-    PrefsHelper.setPref("network.proxy.socks_version",5); //manual proxy settings
+		PrefsHelper.setPref("network.proxy.socks","localhost"); //manual proxy settings
+		PrefsHelper.setPref("network.proxy.socks_port",9050); //manual proxy settings
+		PrefsHelper.setPref("network.proxy.socks_version",5); //manual proxy settings
 
 Disable dish cacheing:
 
